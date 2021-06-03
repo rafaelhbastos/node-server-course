@@ -1,82 +1,136 @@
 body {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-  }
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
 
-  main {
-    padding: 1rem;
-  }
-  
-  .header {
-    width: 100%;
-    height: 3.5rem;
-    background-color: #ebd50f;
-    padding: 0 1.5rem;
-  }
+main {
+  padding: 1rem;
+}
 
-  .nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #ebd50f;
+  padding: 0 1.5rem;
+}
 
-  .nav-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
-  .nav-list-item {
-    margin: 0 1rem;
-    padding: 0;
-  }
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-  .nav-list-item a {
-    text-decoration: none;
-    color: #fff;
-  }
+.nav-list-item {
+  margin: 0 1rem;
+  padding: 0;
+}
 
-  .nav-list-item a:hover,
-  .nav-list-item a:active,
-  .nav-list-item a.active {
-    color: #000;
-  }
+.nav-list-item a {
+  text-decoration: none;
+  color: #fff;
+}
 
-  .product-form {
-    width: 20rem;
-    max-width: 90%;
-    margin: auto;
-  }
+.nav-list-item a:hover,
+.nav-list-item a:active,
+.nav-list-item a.active {
+  color: #000;
+}
 
-  .form-control {
-    margin: 1rem 0;
-  }
+.product-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+}
 
-  .form-control label,
-  .form-control input {
-    display: block;
-    width: 100%;
-  }
+.product-title {
+  font-size: 1.2rem;
+  text-align: center;
+}
 
-  .form-control input {
-    border: 1px solid #ebd50f;
-    font: inherit;
-    border-radius: 2px;
-  }
+.product-price {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+}
 
-  button {
-    font: inherit;
-    border: 1px solid #ebd50f;
-    color: #ebd50f;
-    background: #fff;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+.product-description {
+  text-align: center;
+}
 
-  button:hover,
-  button:active {
-    background: #ebd50f;
-    color: white;
-  }
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  border: 1px solid #ebd50f;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.btn {
+  font: inherit;
+  border: 1px solid #ebd50f;
+  color: #ebd50f;
+  background: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background: #ebd50f;
+  color: white;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.card-header,
+.card-content {
+  padding: 1rem;
+}
+
+.card-header h1,
+.card-content h1,
+.card-content h2,
+.card-content p {
+  margin: 0;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-actions {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-actions button,
+.card-actions a {
+  margin: 0 0.25rem;
+}
+
+
