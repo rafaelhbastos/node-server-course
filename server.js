@@ -5,6 +5,7 @@ const express = require('express');
 const errorController = require('./controllers/error');
 
 const {mongoConnect} = require('./util/database');
+const User = require('./models/user');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
@@ -19,13 +20,12 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  // User.findByPk(1)
-  // .then(user => {
-  //   req.user = user;
-  //   next();
-  // })
-  // .catch(err => console.log(err));
-  next();
+  User.findById("60f81af187c0b6140e52d103")
+  .then(user => {
+    req.user = new User(user.name, user.email, user.cart, user._id);
+    next();
+  })
+  .catch(err => console.log(err));
 });
 
 app.use('/admin', adminRoutes);
