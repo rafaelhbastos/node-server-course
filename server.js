@@ -1,10 +1,10 @@
 const path = require('path');
 
 const express = require('express');
+const mongoose = require('mongoose');
 
 const errorController = require('./controllers/error');
 
-const {mongoConnect} = require('./util/database');
 const User = require('./models/user');
 
 const adminRoutes = require('./routes/admin');
@@ -33,6 +33,8 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-mongoConnect(() => {
-  app.listen(3000);
-})
+mongoose.connect('mongodb+srv://rafaelpessoa12:' + process.env.MONGO_ATLAS_PW + '@cluster0.05jl7.mongodb.net/node_course?retryWrites=true&w=majority')
+  .then(() => {
+    app.listen(3000)
+  })
+  .catch(err => console.log(err));
